@@ -41,3 +41,94 @@
     transform: rotate(360deg);
   }
 }
+
+.giftList {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    max-width: 1200px;
+    width: 90%;
+
+/*  Create grid of 3x4 gift cards */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+.giftCard {
+  background-color: dimgray;
+  width: 90%;
+  border-radius: 20px;
+  margin: 10px;
+  height: 450px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.giftCard .description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 60px;
+}
+
+.giftCard .category {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+
+    font-size: 20px;
+}
+
+.giftCard .amazonLink {
+    background-color: dimgrey;
+    color: orange;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 40px 10px 10px;
+    font-size: 14px;
+}
+
+.giftCard .price {
+    font-size: 20px;
+}
+
+.keywords {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.keywords p {
+    margin: 0 5px;
+    font-size: 12px;
+}
+
+.giftCard {
+  color: aliceblue;
+}
+
+.giftCard p {
+    line-height: 18px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.giftCard h1 {
+    font-size: 40px;
+}
