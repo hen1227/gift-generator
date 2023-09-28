@@ -6,9 +6,11 @@
 }
 
 .App-sidebar {
-    width: 20vw;
-    min-width: 250px;
-    max-width: 500px;
+    /*width: 20vw;*/
+    /*min-width: 250px;*/
+    /*max-width: 500px;*/
+    width: 260px;
+
     position: sticky;
     /*height: 100vh;*/
     background: #202123;
@@ -41,8 +43,8 @@
     text-align: left;
     height: 40px;
     border-radius: 4px;
-    padding: 0 12px;
-    margin: 10px 10px;
+    padding: 0 8px;
+    margin: 10px 8px;
     background-color: #202123;
     border: #39393b 1px solid;
     color: #eee;
@@ -73,7 +75,7 @@
 .App-header {
     min-height: 100vh;
     top: 0;
-    width: 80vw;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
