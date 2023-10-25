@@ -2,7 +2,7 @@ import axios from "axios";
 import {UUID} from "./UUID";
 import {saveConversation} from "./Converasations";
 
-const endpoint = 'http://localhost:3001/api';
+const endpoint = 'https://api.gifts.henhen1227.com';
 
 export const sendInitialMessage = (formData, setIsLoading, setData, setErrorMessage, setConversations) => {
     setIsLoading(true);
