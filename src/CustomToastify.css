@@ -1,0 +1,9 @@
+.Toastify__toast--error {
+    border: 1px solid #EB5757;
+    border-radius: 10px !important;
+    background: #EB575790 !important;
+    width: 60%;
+    max-width: 800px;
+    min-width: 500px;
+    margin-left: calc(-70% / 2);
+}

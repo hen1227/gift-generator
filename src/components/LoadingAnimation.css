@@ -1,0 +1,11 @@
+.loading-animation {
+    position: absolute;
+    top: auto;
+    left: auto;
+    width: fit-content;
+    height: fit-content;
+
+
+    /*box-shadow: #eeeeee 0px 0px 10px 10px;*/
+    background: radial-gradient(circle at center, white 0%, #ffffff0f 30%, #ffffff00 40%);
+}
