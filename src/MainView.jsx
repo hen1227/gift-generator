@@ -101,7 +101,7 @@ function MainView({isLoading, setIsLoading}) {
             preferences: preferences,
             openEndedAddition: openEndedAddition,
         }
-        sendInitialMessage(formData, setIsLoading, setData, setErrorMessage, setConversation);
+        sendInitialMessage(formData, setIsLoading, setData, setErrorMessage, setConversation, navigate);
     }
 
     const followUpSubmit = () => {

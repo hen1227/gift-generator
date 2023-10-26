@@ -1,10 +1,11 @@
 import axios from "axios";
 import {UUID} from "./UUID";
 import {saveConversation} from "./Converasations";
+import {useNavigate, useNavigation} from "react-router-dom";
 
 const endpoint = 'https://api.gifts.henhen1227.com';
 
-export const sendInitialMessage = (formData, setIsLoading, setData, setErrorMessage, setConversations) => {
+export const sendInitialMessage = (formData, setIsLoading, setData, setErrorMessage, setConversations, navigate) => {
     setIsLoading(true);
 
     axios.post(`${endpoint}/sendInitialMessage`, {
@@ -14,11 +15,12 @@ export const sendInitialMessage = (formData, setIsLoading, setData, setErrorMess
         data: formData
     })
         .then(function (response) {
-            const newData = {conversationUUID: UUID(), data: [{promptInfo: formData, gifts: response.data.gifts}]}
+            const newData = {uuid: UUID(), data: [{promptInfo: formData, gifts: response.data.gifts}]}
             console.log("new data:", newData);
             setData(newData);
-            saveConversation(response.data.conversation_title, newData.conversationUUID, [{promptInfo: formData, gifts: response.data.gifts}], setConversations);
+            saveConversation(response.data.conversation_title, newData.uuid, [{promptInfo: formData, gifts: response.data.gifts}], setConversations);
             setErrorMessage('');
+            navigate('/c/' + newData.uuid);
         })
         .catch(function (error) {
             setErrorMessage(error.message);
