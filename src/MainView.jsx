@@ -11,7 +11,6 @@ import { ReactComponent as SidebarIcon} from './icons/sidebar-regular.svg';
 import { ReactComponent as BookmarkIcon} from './icons/gift-svgrepo-com.svg';
 import InitialForm from "./components/InitialForm";
 import FeedbackBar from "./components/FeedbackBar";
-import LoadingAnimation from "./components/LoadingAnimation";
 import GiftList from "./components/GiftList";
 import InputBar from "./components/InputBar";
 import Sidebar from "./components/Sidebar";
@@ -21,7 +20,7 @@ import {getBookmarks} from "./util/Bookmarks";
 import {toast} from "react-toastify";
 
 
-function MainView() {
+function MainView({isLoading, setIsLoading}) {
     const {uuid} = useParams();
     const navigate = useNavigate();
 
@@ -47,8 +46,6 @@ function MainView() {
     // Follow up variables
     const [thumbsUpCategories, setThumbsUpCategories] = useState([]);
     const [thumbsDownCategories, setThumbsDownCategories] = useState([]);
-
-    const [isLoadingData, setIsLoading] = useState(false);
 
     const [interestList, setInterestList] = useState([]);
 
@@ -183,7 +180,7 @@ function MainView() {
                         openEndedAddition={openEndedAddition}
                         setOpenEndedAddition={setOpenEndedAddition}
                         interestList={interestList}
-                        isLoadingData={isLoadingData}
+                        isLoadingData={isLoading}
                         initialSubmit={initialSubmit}
                    />
                 )}
@@ -215,6 +212,7 @@ function MainView() {
                             variant="outlined"
                             size="large"
                             onClick={followUpSubmit}
+                            disabled={isLoading}
                             style={{ marginBottom: '120px' }}
                         >
                             Generate More!

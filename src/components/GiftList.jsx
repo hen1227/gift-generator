@@ -3,7 +3,7 @@ import React from "react";
 import {deleteBookmark, getBookmarks, saveBookmark} from "../util/Bookmarks";
 import { ReactComponent as BookmarkIcon} from '../icons/bookmark-solid.svg';
 import { ReactComponent as UnBookmarkIcon} from '../icons/bookmark-regular.svg';
-import { ReactComponent as ExpandUponIcon} from '../icons/magnifying-glass-plus-solid.svg';
+// import { ReactComponent as ExpandUponIcon} from '../icons/magnifying-glass-plus-solid.svg';
 
 
 const GiftList = ({ input, index, thumbsUpCategories, setThumbsUpCategories, thumbsDownCategories, setThumbsDownCategories, bookmarks, setBookmarks, conversationUUID}) => {

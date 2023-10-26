@@ -13,8 +13,8 @@ function App() {
         <Router>
             <div className={"app"}>
                 <Routes>
-                    <Route path="/c/:uuid" element={<MainView setIsLoadingData={setIsLoadingData} />} />
-                    <Route path="/*" element={<MainView setIsLoadingData={setIsLoadingData} />} />
+                    <Route path="/c/:uuid" element={<MainView isLoading={isLoadingData} setIsLoading={setIsLoadingData} />} />
+                    <Route path="/*" element={<MainView isLoading={isLoadingData} setIsLoading={setIsLoadingData} />} />
                 </Routes>
             </div>
             { isLoadingData && (

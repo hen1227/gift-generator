@@ -271,7 +271,7 @@ const InitialForm = ({
                         </Button>
                     )}
                     {currentForm === formComponents.length - 1 && (
-                        <Button variant="contained" color="primary" onClick={initialSubmit}>
+                        <Button disabled={isLoadingData} variant="contained" color="primary" onClick={initialSubmit}>
                             Submit
                         </Button>
                     )}
