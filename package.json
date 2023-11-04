@@ -1,6 +1,6 @@
 {
   "name": "gifts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
   "dependencies": {
@@ -14,6 +14,7 @@
     "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-ga": "^3.3.1",
     "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.3",

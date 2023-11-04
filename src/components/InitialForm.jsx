@@ -33,6 +33,7 @@ const InitialForm = ({
      setOpenEndedAddition,
      isLoadingData,
      initialSubmit,
+     budgetScale
     }) => {
 
     console.log("interstsList:", interestList);
@@ -96,6 +97,7 @@ const InitialForm = ({
         "Daughter",
         "Wife",
         "Husband",
+        "Friend",
         "Girlfriend",
         "Boyfriend",
         "Grandmother",
@@ -161,17 +163,18 @@ const InitialForm = ({
             }}
         />,
         <FormControl fullWidth margin="normal">
-            <Typography gutterBottom>Budget Range ${budgetRange[0]} - ${budgetRange[1]}</Typography>
+            <Typography gutterBottom>Budget Range ${budgetScale(budgetRange[0])} - ${budgetScale(budgetRange[1])}</Typography>
             <Slider
                 value={budgetRange}
                 onChange={(e, newValue) => setBudgetRange(newValue)}
                 valueLabelDisplay="auto"
-                step={5}
+                step={1}
+                scale={x => budgetScale(x)}
                 aria-label={`$${budgetRange[0]} - $${budgetRange[1]}`}
                 valueLabelFormat={(value) => {
                     return `$${value}`;
                 }}
-                max={100} // or whatever the max budget is
+                max={19}
             />
         </FormControl>,
         <Autocomplete
@@ -221,7 +224,7 @@ const InitialForm = ({
     const formComponentRecap = [
         age ? `${age} year old` : 'No age specified',
         relationship ? `${relationship}` : 'No relationship specified',
-        budgetRange ?  `$${budgetRange[0]} – $${budgetRange[1]}` : 'No Budget Range',
+        budgetRange ?  `$${budgetScale(budgetRange[0])} – $${budgetScale(budgetRange[1])}` : 'No Budget Range',
         occasion ? `For ${occasion}` : 'No occasion specified',
         interests ? `They're interested in: ${interests}` : 'No Interests specified',
         openEndedAddition ? `Open Ended Addition: ${openEndedAddition}` : 'No Open Ended Addition specified',

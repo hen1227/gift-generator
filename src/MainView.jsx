@@ -36,7 +36,7 @@ function MainView({isLoading, setIsLoading}) {
     const [age, setAge] = useState('');
     const [gender, setGender] = useState('');
     const [relationship, setRelationship] = useState('');
-    const [budgetRange, setBudgetRange] = useState([0, 20]);
+    const [budgetRange, setBudgetRange] = useState([0, 3]);
     const [occasion, setOccasion] = useState('');
     const [interests, setInterests] = useState([]);
     const [disinterests, setDisinterests] = useState([]);
@@ -93,8 +93,8 @@ function MainView({isLoading, setIsLoading}) {
             age: age,
             gender: gender,
             relationship: relationship,
-            upperBudgetRange: Math.max(budgetRange[0], budgetRange[1]),
-            lowerBudgetRange: Math.min(budgetRange[0], budgetRange[1]),
+            upperBudgetRange: budgetScale(Math.max(budgetRange[0], budgetRange[1])),
+            lowerBudgetRange: budgetScale(Math.min(budgetRange[0], budgetRange[1])),
             occasion: occasion,
             interests: interests,
             disinterests: disinterests,
@@ -142,6 +142,16 @@ function MainView({isLoading, setIsLoading}) {
         window.location.reload();
     }
 
+    function budgetScale(x) {
+        // From 0-10, scale to 0-100
+        // From 10-20, scale to 100-1000
+        if(x <= 10) {
+            return x * 10;
+        }else {
+            return (x - 10) * 100 + 100;
+        }
+    }
+
     return (
         <div className="App">
             {!showSidebar && (
@@ -182,6 +192,7 @@ function MainView({isLoading, setIsLoading}) {
                         interestList={interestList}
                         isLoadingData={isLoading}
                         initialSubmit={initialSubmit}
+                        budgetScale={budgetScale}
                    />
                 )}
                 {data && data.data && data.data.map((input, index) => {

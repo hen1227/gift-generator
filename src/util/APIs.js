@@ -1,7 +1,6 @@
 import axios from "axios";
 import {UUID} from "./UUID";
 import {saveConversation} from "./Converasations";
-import {useNavigate, useNavigation} from "react-router-dom";
 
 const endpoint = 'https://api.gifts.henhen1227.com';
 
