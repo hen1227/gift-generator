@@ -5,7 +5,7 @@ import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import './CustomToastify.css'
 import LoadingAnimation from "./components/LoadingAnimation";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 ReactGA.initialize('G-GJ1HGT7CY6');
 
@@ -13,7 +13,7 @@ function App() {
     const [isLoadingData, setIsLoadingData] = React.useState(false);
 
     if (window.location.hostname !== "localhost") {
-        ReactGA.pageview(window.location.pathname + window.location.search);
+        ReactGA.send("pageview")
     }
 
     return (

@@ -28,8 +28,8 @@ function MainView({isLoading, setIsLoading}) {
     const [errorMessage, setErrorMessage] = useState(null);
     const [conversation, setConversation] = useState({})
     const [bookmarks, setBookmarks] = useState([]);
-    const [showSidebar, setShowSidebar] = useState(true);
-    const [showBookmarks, setShowBookmarks] = useState(true)
+    const [showSidebar, setShowSidebar] = useState(window.innerWidth > 800);
+    const [showBookmarks, setShowBookmarks] = useState(window.innerWidth > 800)
 
     // Form variables
     // const [name, setName] = useState('');
