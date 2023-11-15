@@ -169,6 +169,9 @@ function MainView({isLoading, setIsLoading}) {
             )}
             <div style={showSidebar ? {} : {width: '100svw'}} className="App-header">
                 {!data && (
+                    // Unfortunately, I figured out the proper way to do this a little too late
+                    // so I decided to leave it as is.
+                    // TODO: Extract these variables to exists in a wrapper component.
                    <InitialForm
                         theme={darkTheme}
                         age={age}

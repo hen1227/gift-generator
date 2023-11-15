@@ -1,3 +1,15 @@
+/*
+* GPT-Based Gift Idea Generator
+* Frontend ReactJS page
+*
+* This is the final version that I will be submitting for
+* my Applied Science and Engineering Capstone
+*
+* 11/15/23
+*
+* Henry Abrahamsen (c) 2023
+*/
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
