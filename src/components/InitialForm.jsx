@@ -131,6 +131,13 @@ const InitialForm = ({
         "Professor"
     ];
 
+    const onKeyDown = (e) => {
+        if(e.keyCode === 13){
+            console.log('value', e.target.value);
+            setCurrentForm((prev) => prev + 1);
+        }
+    }
+
     const formComponents = [
         <FormControl fullWidth margin="normal">
             <TextField
@@ -138,6 +145,7 @@ const InitialForm = ({
                 type="number"
                 value={age}
                 onChange={(e) => setAge(e.target.value)}
+                onKeyDown={onKeyDown}
             />
         </FormControl>,
         // <FormControl fullWidth margin="normal">
@@ -161,6 +169,7 @@ const InitialForm = ({
             onInputChange={(event, newValue) => {
                 setRelationship(newValue);
             }}
+            onKeyDown={onKeyDown}
         />,
         <FormControl fullWidth margin="normal">
             <Typography gutterBottom>Budget Range ${budgetScale(budgetRange[0])} - ${budgetScale(budgetRange[1])}</Typography>
@@ -175,6 +184,7 @@ const InitialForm = ({
                     return `$${value}`;
                 }}
                 max={19}
+                onKeyDown={onKeyDown}
             />
         </FormControl>,
         <Autocomplete
@@ -193,6 +203,7 @@ const InitialForm = ({
                 console.log("new value:", newValue)
                 setOccasion(newValue || "");
             }}
+            onKeyDown={onKeyDown}
         />,
         <Autocomplete
             multiple
