@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.31afa5a8.css",
-    "main.js": "/static/js/main.8e45469d.js",
-    "static/js/787.4cb0a28b.chunk.js": "/static/js/787.4cb0a28b.chunk.js",
+    "main.css": "/static/css/main.acf8f3ed.css",
+    "main.js": "/static/js/main.64cbbb8b.js",
+    "static/js/787.e8d54294.chunk.js": "/static/js/787.e8d54294.chunk.js",
     "static/media/pen-to-square-regular.svg": "/static/media/pen-to-square-regular.ccc231d5437ac6b863729297b26db44a.svg",
     "static/media/gift-svgrepo-com.svg": "/static/media/gift-svgrepo-com.6be756210f9f246b0334a3dd520c0403.svg",
     "index.html": "/index.html",
@@ -12,12 +12,12 @@
     "static/media/trash-can-regular.svg": "/static/media/trash-can-regular.b77e6053e994468581d554c8ef1bcc93.svg",
     "static/media/plus-solid.svg": "/static/media/plus-solid.24ed2c96db9a87f1b993e83ce84df4e5.svg",
     "static/media/sidebar-regular.svg": "/static/media/sidebar-regular.27d773485ec9cf65e902eef8e6ec0180.svg",
-    "main.31afa5a8.css.map": "/static/css/main.31afa5a8.css.map",
-    "main.8e45469d.js.map": "/static/js/main.8e45469d.js.map",
-    "787.4cb0a28b.chunk.js.map": "/static/js/787.4cb0a28b.chunk.js.map"
+    "main.acf8f3ed.css.map": "/static/css/main.acf8f3ed.css.map",
+    "main.64cbbb8b.js.map": "/static/js/main.64cbbb8b.js.map",
+    "787.e8d54294.chunk.js.map": "/static/js/787.e8d54294.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.31afa5a8.css",
-    "static/js/main.8e45469d.js"
+    "static/css/main.acf8f3ed.css",
+    "static/js/main.64cbbb8b.js"
   ]
 }
